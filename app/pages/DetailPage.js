@@ -24,6 +24,7 @@ import Loading from '../common/Loading';
 import HeaderView from '../common/HeaderView';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import moment from 'moment';
+require('moment/locale/zh-cn');
 import LoadMoreFooter from '../common/LoadMoreFooter';
 import CollectInformationPage from './CollectInformationPage';
 
