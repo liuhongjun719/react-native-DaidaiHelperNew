@@ -3,7 +3,7 @@
 import * as types from './actionTypes';
 import Util from '../common/utils';
 
-export let HousingLoanAction = (isNoData,isLoadMore, isRefreshing, isLoading, page) => {
+export let housingLoanAction = (isNoData,isLoadMore, isRefreshing, isLoading, page) => {
     // let URL = 'http://api.coins.app887.com/api/Articles.action?keyword=&kind=&npc=0&opc=25&type=%E6%88%BF%E4%BA%A7&uid=1994';
     let URL = 'http://api.coins.app887.com/api/Articles.action?keyword=&kind=&npc=';
     URL += page;

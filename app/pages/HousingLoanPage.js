@@ -17,8 +17,8 @@ import {
 } from 'react-native';
 
 
-
-import {HousingLoanAction} from '../actions/HousingLoanAction.js';
+import * as HousingLoanAction from '../actions/HousingLoanAction.js';
+// import {HousingLoanAction} from '../actions/HousingLoanAction.js';
 import Common from '../common/common';
 import InformationPage from './InformationPage';
 import HeaderView from '../common/HeaderView';
@@ -61,7 +61,7 @@ class HousingLoanPage extends Component {
     componentDidMount() {
         InteractionManager.runAfterInteractions(() => {
           const {dispatch} = this.props
-          dispatch(HousingLoanAction(isNoData,isLoadMore, isRefreshing, isLoading, page));
+          dispatch(HousingLoanAction.housingLoanAction(isNoData,isLoadMore, isRefreshing, isLoading, page));
         })
     }
 
@@ -74,7 +74,7 @@ class HousingLoanPage extends Component {
       isRefreshing = true;
       page = 0;
       const {dispatch} = this.props;
-      dispatch(HousingLoanAction(isNoData,isLoadMore, isRefreshing, isLoading, page));
+      dispatch(HousingLoanAction.housingLoanAction(isNoData,isLoadMore, isRefreshing, isLoading, page));
 
     }
 
@@ -217,7 +217,7 @@ class HousingLoanPage extends Component {
         isLoadMore = false;
         isRefreshing = true;
         page = 0;
-        dispatch(HousingLoanAction(isNoData,isLoadMore, isRefreshing, isLoading, page));
+        dispatch(HousingLoanAction.housingLoanAction(isNoData,isLoadMore, isRefreshing, isLoading, page));
 
       }
     }
@@ -230,7 +230,7 @@ class HousingLoanPage extends Component {
         isLoadMore = true;
         isLoading = false;
         page++;
-        dispatch(HousingLoanAction(isNoData,isLoadMore, isRefreshing, isLoading, page));
+        dispatch(HousingLoanAction.housingLoanAction(isNoData,isLoadMore, isRefreshing, isLoading, page));
 
       })
 
