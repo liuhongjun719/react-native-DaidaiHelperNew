@@ -1,5 +1,5 @@
 # DaidaiHelperNew
-Listview展示”贷贷助手” app
+Listview展示”贷贷助手” app, 一个比较完整的app。
 
 
 ## Screenshot
