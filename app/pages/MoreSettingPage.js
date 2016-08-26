@@ -16,6 +16,7 @@ import Common from '../common/common';
 import HeaderView from '../common/HeaderView';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import DetailPageContainer from '../containers/DetailPageContainer';
+import Storage from '../common/Storage';
 
 var stateTest = true;
 
@@ -30,11 +31,11 @@ export default class HomeDetil extends Component {
   }
 
   _onValueChange(value) {
+    // console.log('value-------:' + value);
     this.setState({
       isSwitchOn: value,
     })
-    console.log('value-------:' + value);
-
+    console.log('vvvvvvv' + this.state.isSwitchOn);
   }
 
   _renderRow(
@@ -72,7 +73,7 @@ export default class HomeDetil extends Component {
               <Text>{rowData}</Text>
               <Switch
                value = {this.state.isSwitchOn}
-               onValueChange = {this._onValueChange.bind(this, this.state.isSwitchOn)}
+               onValueChange = {this._onValueChange.bind(this)}
                />
           </View>
         </TouchableOpacity>
@@ -110,7 +111,7 @@ export default class HomeDetil extends Component {
 
 
     render() {
-      console.log('value-------:' + this.state.isSwitchOn);
+      // console.log('value-------:' + this.state.isSwitchOn);
 
         return (
             <View>

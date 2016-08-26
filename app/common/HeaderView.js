@@ -14,6 +14,8 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import Common from '../common/common';
 
 import Util from './utils';
+import { toastShort } from '../common/ToastUtil';
+
 
 
 
@@ -63,19 +65,22 @@ export default class Header extends React.Component {
       commend_url = 'http://api.coins.app887.com/api/DeleteFav.action?id=1994&articleid=';
     }
     commend_url += this.state.pageID;
-console.log('commend_url=========:' + commend_url);
-    fetch(commend_url)
-  .then((response) => response.json())
-  .catch((error) => {
+    console.log('commend_url=========:' + commend_url);
+
+  Util.get(commend_url,(response) => {
+    console.log('成功------');
+    if (this.state.collectState == '0') {
+      toastShort('已收藏');
+    }else if (this.state.collectState == '1') {
+      toastShort('取消收藏');
+    }
+      this.setState({
+      });
+  },(error) => {
     console.log('失败------');
-  })
-  .then((responseData) => {
-console.log('成功------');
-    this.setState({
-    });
-  })
-  .done();
-  }
+    toastShort('收藏失败');
+  });
+}
 
 
 
