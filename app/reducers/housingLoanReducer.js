@@ -24,21 +24,24 @@ let housingLoanReducer = (state = initialState, action) => {
         case types.RECEIVE_HOUSINGLOAN_LIST:
             // console.log(action);
             return Object.assign({}, state, {
-                ClassDate: state.isLoadMore ? state.ClassDate.concat(action.classList) : action.classList,
+                ClassDate: state.isLoadMore ? loadMore(state, action) : refresh(state, action),
                 isLoading: false,
                 isRefreshing: false,
                 isNoData: action.isNoData,
             })
-
-        // case types.RESET_HOUSINGLOAN_STATE:
-        //     return Object.assign({},state,{
-        //       ClassDate: [],
-        //       isLoading: true,
-        //     })
-
         default:
             return state;
     }
+}
+
+function refresh(state, action) {
+  state.classList = action.classList;
+  return state.classList;
+}
+
+function loadMore(state, action) {
+  state.ClassDate = state.ClassDate.concat(action.classList);
+  return state.ClassDate;
 }
 
 export default housingLoanReducer;

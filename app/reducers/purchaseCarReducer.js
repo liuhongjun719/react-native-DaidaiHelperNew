@@ -24,7 +24,7 @@ let purchaseCarReducer = (state = initialState, action) => {
         case types.RECEIVE_PURCHASECAR_LIST:
             // console.log(action);
             return Object.assign({}, state, {
-                ClassDate: state.isLoadMore ? state.ClassDate.concat(action.classList) : action.classList,
+              ClassDate: state.isLoadMore ? loadMore(state, action) : refresh(state, action),
                 isLoading: false,
                 isRefreshing: false,
                 isNoData: action.isNoData,
@@ -34,5 +34,16 @@ let purchaseCarReducer = (state = initialState, action) => {
             return state;
     }
 }
+
+function refresh(state, action) {
+  state.classList = action.classList;
+  return state.classList;
+}
+
+function loadMore(state, action) {
+  state.ClassDate = state.ClassDate.concat(action.classList);
+  return state.ClassDate;
+}
+
 
 export default purchaseCarReducer;
