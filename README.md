@@ -24,10 +24,10 @@ Listview展示”贷贷助手” app, 一个比较完整的app。
 
 
 
-## Relevant Projects
+## Relevant Projects of React Native
 
 * [`月子食谱App`](https://github.com/liuhongjun719/react-native-FoodMenu) 界面侧滑
-* [`宝宝身心健康App`](https://github.com/liuhongjun719/react-native-BabyHealth-) 
+* [`宝宝身心健康App`](https://github.com/liuhongjun719/react-native-BabyHealth-) Listview界面展示
 
 
 
