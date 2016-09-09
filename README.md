@@ -23,3 +23,11 @@ Listview展示”贷贷助手” app, 一个比较完整的app。
 >* 进入文件夹中： node_modules/react-native-tab-navigator ，将其中名字为Badge.js、Layout.js、StaticContainer.js、Tab.js、TabBar.js、TabNavigator.js、TabNavigatorItem.js的文件替换成 文件夹changeJS中的7个文件(改变tabBar的样式)<br> 
 
 
+
+## Relevant Projects
+
+* [`月子食谱App`](https://github.com/liuhongjun719/react-native-FoodMenu) 界面侧滑
+* [`宝宝身心健康App`](https://github.com/liuhongjun719/react-native-BabyHealth-) 
+
+
+
