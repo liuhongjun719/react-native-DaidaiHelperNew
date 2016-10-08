@@ -32,7 +32,7 @@ Listview展示”贷贷助手” app, 一个比较完整的app。
 * [`南方周末App`](https://github.com/liuhongjun719/SouthWeekend) listview折叠，二级列表
 
 
-## RCTWebSocket Resolve error
+## XCode8 RCTWebSocket 报错解决
 解决办法：
 选择Libraries —> RCTWebSocket.xcodeproj  —> TARGETS —> RCTWebSocket —> Build Setting —> 搜索框中输入custom compiler flag —> 将左侧flag的标志对应的右边的值删掉<br>
 
